@@ -1,4 +1,8 @@
 import { DataSource } from 'typeorm'
+import { Rocket } from './src/entities/Rocket'
+import { Launch } from './src/entities/Launch'
+import { Crew } from './src/entities/Crew'
+import { Crewman } from './src/entities/Crewman'
 
 export const connectionSource = new DataSource({
     type: 'postgres',
@@ -8,5 +12,5 @@ export const connectionSource = new DataSource({
     password: 'FXfnf6jSDVHvlAKkbN6k-TehusBzjniY',
     database: 'tunawoyu',
     migrations: ['src/database/migrations/*.ts'],
-    entities: ['src/entities/*{.ts,.js}']
+    entities: [Rocket, Launch, Crew, Crewman]
 })
