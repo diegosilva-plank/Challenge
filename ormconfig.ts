@@ -9,4 +9,4 @@ export const connectionSource = new DataSource({
     database: 'tunawoyu',
     migrations: ['src/database/migrations/*.ts'],
     entities: ['src/entities/*{.ts,.js}']
-})//
+})

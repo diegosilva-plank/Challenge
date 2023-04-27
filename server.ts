@@ -10,6 +10,8 @@ app.use(express.json())
 app.use(router)
 app.use(errors());
 
+app.get('/', (req, res) => res.send('Hello rockets!'))
+
 connectionSource.initialize()
     .then(() => {
         console.log('Data Source has been initialized')
