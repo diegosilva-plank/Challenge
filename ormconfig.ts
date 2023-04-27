@@ -8,5 +8,5 @@ export const connectionSource = new DataSource({
     password: 'FXfnf6jSDVHvlAKkbN6k-TehusBzjniY',
     database: 'tunawoyu',
     migrations: ['src/database/migrations/*.ts'],
-    entities: ['src/entities/*.ts']
+    entities: ['src/entities/*{.ts,.js}']
 })
