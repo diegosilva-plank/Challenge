@@ -1,6 +1,4 @@
-import { Crew } from "../entities/Crew";
-import { Crewman } from "../entities/Crewman";
-import { CrudRepository } from "../repositories/genericRepository";
+import { CrudRepository } from "../repositories/crudRepository";
 
 export class CrudService<T> {
 

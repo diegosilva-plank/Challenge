@@ -9,4 +9,4 @@ import { LaunchService } from "./launchServices";
 export const rocketService = new CrudService<Rocket>(repositories.rocketRepository);
 export const launchService = new LaunchService(repositories.launchRepository);
 export const crewService= new CrewService(repositories.crewRepository);
-export const crewManService = new CrewmanService(repositories.crewManRepository);
+export const crewManService = new CrewmanService(repositories.crewmanRepository);

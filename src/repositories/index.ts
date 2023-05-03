@@ -1,10 +1,20 @@
-import { Crew } from "../entities/Crew";
-import { Crewman } from "../entities/Crewman";
-import { Launch } from "../entities/Launch";
-import { Rocket } from "../entities/Rocket";
-import { CrudRepository } from "./genericRepository";
+import { connectionSource } from "../database/ormconfig";
+import { CrewRepository } from "./crewRepository";
+import { CrewmanRepository } from "./crewmanRepository";
+import { LaunchRepository } from "./launchRepository";
+import { RocketRepository } from "./rocketRepository";
 
-export const rocketRepository = new CrudRepository(Rocket);
-export const launchRepository = new CrudRepository(Launch);
-export const crewRepository = new CrudRepository(Crew);
-export const crewManRepository = new CrudRepository(Crewman);
+export const rocketRepository = new RocketRepository();
+export const launchRepository = new LaunchRepository();
+export const crewRepository = new CrewRepository();
+export const crewmanRepository = new CrewmanRepository();
+
+export const repositoryInitialize = () => {
+    connectionSource.initialize()
+        .then(() => {
+            console.log('Data Source has been initialized')
+        })
+        .catch((err) => {
+            console.error('Error during Data Source initialization', err)
+        })
+}

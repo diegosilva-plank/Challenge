@@ -1,5 +1,5 @@
 import { Joi, Segments, celebrate } from "celebrate";
-import { Launch } from "../entities/Launch";
+import { Launch } from "../database/models/LaunchDB";
 
 export const createLaunchValidator = celebrate({
   [Segments.BODY]: Joi.object<Launch>().keys({
