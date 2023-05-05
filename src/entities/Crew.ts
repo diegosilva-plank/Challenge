@@ -7,7 +7,7 @@ export class Crew {
 
     name: string
 
-    crewmen: Crewman[]
+    crewmen: any[]
 
     constructor(props: Omit<Crew, 'id' | 'crewmen'>, id?: string) {
         Object.assign(this, props)

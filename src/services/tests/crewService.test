@@ -1,0 +1,25 @@
+
+// import { crewService } from ".."
+// import { Crew } from "../../entities/Crew"
+// import { repositoryInitialize } from "../../repositories"
+
+// describe('Testing crewSevice', () => {
+//     test('Creating crew', async () => {
+//         await repositoryInitialize()
+//         const crew = new Crew({ name: 'Crew' })
+//         const created_crew = await crewService.create(crew)
+//         expect(created_crew.id).toBe(crew.id)
+//         expect(created_crew.name).toBe('Crew')
+//         await crewService.delete(created_crew.id)
+//     })
+
+//     test('Get crew', async () => {
+//         const crew = new Crew({ name: 'Crew' })
+//         const created_crew = await crewService.create(crew)
+//         const id = created_crew.id
+//         const got = await crewService.get({ id })
+//         expect(got.length).toBe(1)
+//         expect(got[0].id).toBe(id)
+//         await crewService.delete(id)
+//     })
+// })

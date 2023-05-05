@@ -6,7 +6,6 @@ export class CrudService<T> {
 
   constructor(repository: CrudRepository<T>) {
     this.repository = repository
-
   }
 
   async get(filter?: Partial<T>): Promise<T[]> {

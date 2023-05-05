@@ -12,8 +12,8 @@ export class LaunchRepository implements CrudRepository<Launch> {
     this.repo = connectionSource.getRepository(LaunchDB);
   }
 
-  async get(filter?: Partial<Launch>): Promise<Launch[]> {
-    const filterDB = filter as FindManyOptions<LaunchDB>
+  async get(filter?: Partial<Launch>, relations?: any): Promise<Launch[]> {
+    const filterDB = { where: filter }
     const result = await this.repo.find(filterDB)
     return result as Launch[]
   } 

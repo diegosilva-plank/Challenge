@@ -13,7 +13,7 @@ export class CrewmanRepository implements CrudRepository<Crewman> {
   }
 
   async get(filter?: Partial<Crewman>): Promise<Crewman[]> {
-    const filterDB = filter as FindManyOptions<CrewmanDB>
+    const filterDB = { where: filter }
     const result = await this.repo.find(filterDB)
     return result as Crewman[]
   } 

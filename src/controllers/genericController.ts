@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
 import { CrudService } from "../services/genericService";
+import { Launch } from "../entities/Launch";
 
 export class CrudController<T> {
     private service: CrudService<T>

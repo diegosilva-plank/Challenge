@@ -9,7 +9,7 @@ export class Crewman {
 
     patent: string
 
-    crews: Crew[]
+    crews: any[]
 
     constructor(props: Omit<Crewman, 'id' | 'crews'>, id?: string) {
         Object.assign(this, props)

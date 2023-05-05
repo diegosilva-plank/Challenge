@@ -12,11 +12,11 @@ export class Launch {
 
     success: boolean
 
-    rocket: Rocket
+    rocket: any
 
-    crew: Crew
+    crew: any
 
-    constructor(props: Omit<Launch, 'id' | 'rocket' | 'crew'>, id?: string) {
+    constructor(props: Omit<Launch, 'id'>, id?: string) {
         Object.assign(this, props)
 
         if(!this.id) {

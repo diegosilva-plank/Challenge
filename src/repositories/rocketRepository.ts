@@ -13,7 +13,7 @@ export class RocketRepository implements CrudRepository<Rocket> {
   }
 
   async get(filter?: Partial<Rocket>): Promise<Rocket[]> {
-    const filterDB = filter as FindManyOptions<RocketDB>
+    const filterDB = { where: filter }
     const result = await this.repo.find(filterDB)
     return result as Rocket[]
   } 

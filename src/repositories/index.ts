@@ -9,12 +9,10 @@ export const launchRepository = new LaunchRepository();
 export const crewRepository = new CrewRepository();
 export const crewmanRepository = new CrewmanRepository();
 
-export const repositoryInitialize = () => {
-    connectionSource.initialize()
-        .then(() => {
-            console.log('Data Source has been initialized')
-        })
-        .catch((err) => {
-            console.error('Error during Data Source initialization', err)
-        })
+export const repositoryInitialize = async () => {
+    await connectionSource.initialize()
+}
+
+export const repositoryDestroy = async () => {
+    await connectionSource.destroy()
 }

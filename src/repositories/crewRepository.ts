@@ -12,9 +12,10 @@ export class CrewRepository implements CrudRepository<Crew> {
     this.repo = connectionSource.getRepository(CrewDB);
   }
 
-  async get(filter?: Partial<Crew>): Promise<Crew[]> {
-    const filterDB = filter as FindManyOptions<CrewDB>
+  async get(filter?: Partial<Crew>, relations?: any): Promise<Crew[]> {
+    const filterDB = { where: filter, relations }
     const result = await this.repo.find(filterDB)
+    console.log(result)
     return result as Crew[]
   } 
 
