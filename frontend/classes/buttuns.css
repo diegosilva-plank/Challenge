@@ -1,0 +1,54 @@
+.btn {
+    border-radius: 5px;
+    padding: 10px 15px;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.488);
+    color: white;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+.btn-blue {
+    background: linear-gradient(#325ed5, #143aa2);
+}
+
+.btn-blue:hover {
+    background: linear-gradient(#1b3372, #0a1c4f);
+}
+
+.btn-pink {
+    background: linear-gradient(#b97aab, #8E6385);
+}
+
+.btn-pink:hover {
+    background: linear-gradient(#7a4f71, #64445d);
+}
+
+.btn-red {
+    background: linear-gradient(rgb(197, 8, 102), rgb(152, 6, 79));
+}
+
+.btn-red:hover {
+    background: linear-gradient(rgb(137, 5, 71), rgb(92, 3, 48));
+}
+
+.btn-green {
+    background: linear-gradient(#169097, #1A5678);
+}
+
+.btn-green:hover {
+    background: linear-gradient(#0d565a, #103449);
+}
+
+.btn-div {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 18px;
+}
+
+.block-div {
+    display: block;
+    background: blue;
+    width: inherit;
+}

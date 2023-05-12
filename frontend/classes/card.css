@@ -1,0 +1,12 @@
+.card {
+    margin: 0 auto;
+    width: 340px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    background: linear-gradient(#E9E2F4, #FEEEF5);
+    box-shadow: 0 0px 7px black;
+}
