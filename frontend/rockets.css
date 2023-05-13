@@ -26,7 +26,7 @@
 } */
 
 
-.input-fields {
+/* .input-fields {
     height: inherit;
     display: flex;
     flex-direction: column;
@@ -35,19 +35,23 @@
     font-size: 22px;
 }
 
-/* .rocket-name-div {
+.input-div {
+    font-size: 22px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
+    margin: 0 15px;
 }
 
-.rocket-name-div input {
+.input-div input {
     margin-top: 5px;
-    font-size: 22px;
+    font-size: 18px;
     width: 200px;
-    padding: 5px;
+    padding: 4px 8px;
 }
+
+
 
 .delete-btn-div {
     width: 300px;
