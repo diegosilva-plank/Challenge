@@ -24,15 +24,24 @@
 .modal-content {
     position: fixed;
     left: calc(50vw - 40vw);
-    top: calc(50vh - 200px);
+    top: calc(50vh - 250px);
     width: 80vw;
-    height: 400px;
+    height: 500px;
+    max-width: 600px;
     border-radius: 10px;
     background: white;
     box-shadow: 0 0px 7px black;
     display: flex;
     flex-direction: column;
 }
+
+@media (min-width: 750px) {
+    .modal-content {
+        left: calc(50vw - 300px);
+        top: calc(50vh - 250px);
+    }
+}
+
 
 /* The Close Button */
 .close {
@@ -51,12 +60,83 @@
 }
 
 .modal-fields {
+    max-width: 450px;
     margin: 0 auto;
-    height: 340px;
+    height: inherit;
+    width: inherit;
     display: flex;
-    background: yellow;
     flex-direction: column;
-    align-items: center;
     justify-content: space-evenly;
+}
+
+.modal-texts {
+    margin: 0 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     font-size: 22px;
+}
+
+.input-div-ctn {
+    display: block;
+    margin: 0 auto;
+}
+
+.input-div {
+    font-size: 22px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: end;
+    margin: 0 15px;
+}
+
+.input-div label {
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.input-div input {
+    margin-top: 5px;
+    margin-left: 8px;
+    margin-right: 8px;
+    font-size: 18px;
+    width: 200px;
+    padding: 4px 8px;
+    border-radius: 5px;
+    background: #E9E2F4;
+    border: none;
+    box-shadow: 0 0 6px rgba(128, 128, 128, 0.315);
+}
+
+@media (max-width: 800px) {
+    .input-div {
+        margin: 0 auto;
+        font-size: 22px;
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        margin: 0 15px;
+    }
+}
+
+.input-div-checkbox {
+    font-size: 22px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: end;
+    margin: 0 15px;
+}
+
+.checkbox-input {
+    display: hidden;
+    width: 20px;
+    height: 20px;
+    background: black;
+    padding: 10px;
 }
