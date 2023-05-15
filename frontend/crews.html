@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="rockets.css">
+    <script src="javascript/modal.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="nav">
+        <input type="checkbox" id="nav-check">
+        <div class="nav-header">
+            <div class="nav-title">
+                <a href="index.html" style="color: white; text-decoration: none;">Rocket System</a>
+            </div>
+        </div>
+        <div class="nav-btn">
+            <label for="nav-check" id="sandwich">
+            <span></span>
+            <span></span>
+            <span></span>
+            </label>
+        </div>
+        
+        <div class="nav-links">
+            <a class="menu-item" href="rockets.html">Rockets</a>
+            <a class="menu-item" href="launches.html">Launches</a>
+            <a class="menu-item" href="crews.html">Crews</a>
+            <a class="menu-item" href="crewmen.html">Crewmen</a>
+        </div>
+    </div>
+
+    <div class="grid">
+        <div class="card">
+            <h2>Equipe 1</h2>
+            <div class="btn-div">
+                <div class="btn btn-blue crewmen-btn">See crewmen</div>
+                <div class="btn btn-pink edit-btn">Edit</div>
+                <div class="btn btn-red delete-btn">Delete</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Equipe 2</h2>
+            <div class="btn-div">
+                <div class="btn btn-blue crewmen-btn">See crewmen</div>
+                <div class="btn btn-pink edit-btn">Edit</div>
+                <div class="btn btn-red delete-btn">Delete</div>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <h2>Equipe 3</h2>
+            <div class="btn-div">
+                <div class="btn btn-blue crewmen-btn">See crewmen</div>
+                <div class="btn btn-pink edit-btn">Edit</div>
+                <div class="btn btn-red delete-btn">Delete</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="btn-div">
+                <div class="btn btn-green add-crew-btn">Add crew</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Delete Modal -->
+    <div id="delete-crew-modal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('delete-crew-modal')">&times;</span>
+            <div class="modal-fields">
+                <div class="modal-texts">
+                    <h3>Are you sure you want to delete this crew?</h3>
+                    <p>This action cannot be reversed</p>
+                </div>
+                <div class="btn-div">
+                    <div class="btn btn-red">Cancel</div>
+                    <div class="btn btn-green">Confirm</div>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+
+    <script>associateButtonToModal('delete-crew-modal', 'delete-btn')</script>
+
+    <!-- Edit Modal -->
+    <div id="edit-crew-modal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('edit-crew-modal')">&times;</span>
+            <div class="modal-fields">
+                <div class="input-div-ctn">
+                    <div class="input-div">
+                        <label>Name:</label>
+                        <input type="text" placeholder="Name">
+                    </div>
+                </div>
+                <div class="btn-div">
+                    <div class="btn btn-red">Cancel</div>
+                    <div class="btn btn-green">Confirm</div>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+
+    <script>associateButtonToModal('edit-crew-modal', 'edit-btn')</script>
+
+    <!-- Remove crewmen Modal -->
+    <div id="remove-crewman-modal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('remove-crewman-modal'); document.getElementById('crew-info-modal').style.display = 'block';">&times;</span>
+            <div class="modal-fields">
+                <div class="modal-texts">
+                    <h3>Are you sure you want to delete this crewman from this crew?</h3>
+                    <p>This action cannot be reversed</p>
+                </div>
+                <div class="btn-div">
+                    <div class="btn btn-red">Cancel</div>
+                    <div class="btn btn-green">Confirm</div>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+
+    <!-- Add Crewman Modal -->
+    <div id="add-crewman-modal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('add-crewman-modal'); document.getElementById('crew-info-modal').style.display = 'block';">&times;</span>
+            <div class="modal-fields">
+                <div class="input-div-ctn">
+                    <div class="input-div">
+                        <label>Crewman name:</label>
+                        <input type="text" placeholder="Name">
+                    </div>
+                </div>
+                <div class="btn-div">
+                    <div class="btn btn-red">Cancel</div>
+                    <div class="btn btn-green">Confirm</div>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+
+    <!-- See crewmen Modal -->
+    <div id="crew-info-modal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('crew-info-modal')">&times;</span>
+            <div class="modal-fields">
+                <div class="input-div-ctn">
+                    <div class="crewman-div">
+                        <h2>Tripulante 1</h2>
+                        <div class="btn btn-red remove-crewman-btn" 
+                        onclick="
+                            document.getElementById('remove-crewman-modal').style.display = 'block';
+                            document.getElementById('crew-info-modal').style.display = 'none'; 
+                        "
+                        >Remove</div>
+                    </div>
+                </div>
+                <div class="input-div-ctn">
+                    <div class="crewman-div">
+                        <h2>Tripulante 2</h2>
+                        <div class="btn btn-red remove-crewman-btn" 
+                        onclick="
+                            document.getElementById('remove-crewman-modal').style.display = 'block';
+                            document.getElementById('crew-info-modal').style.display = 'none'; 
+                        "
+                        >Remove</div>
+                    </div>
+                </div>
+                <div class="input-div-ctn">
+                    <div class="crewman-div">
+                        <h2>Tripulante 3</h2>
+                        <div class="btn btn-red remove-crewman-btn" 
+                        onclick="
+                            document.getElementById('remove-crewman-modal').style.display = 'block';
+                            document.getElementById('crew-info-modal').style.display = 'none'; 
+                        "
+                        >Remove</div>
+                    </div>
+                </div>
+                <div class="btn-div">
+                    <div class="btn btn-green add-crewman-btn"
+                    onclick="
+                        document.getElementById('add-crewman-modal').style.display = 'block';
+                        document.getElementById('crew-info-modal').style.display = 'none'; 
+                    "
+                    >Add crewman</div>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+
+    <script>associateButtonToModal('crew-info-modal', 'crewmen-btn')</script>
+
+    <!-- Add Crew Modal -->
+    <div id="add-crew-modal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('add-crew-modal')">&times;</span>
+            <div class="modal-fields">
+                <div class="input-div-ctn">
+                    <div class="input-div">
+                        <label>Name:</label>
+                        <input type="text" placeholder="Name">
+                    </div>
+                </div>
+                <div class="btn-div">
+                    <div class="btn btn-red">Cancel</div>
+                    <div class="btn btn-green">Confirm</div>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+
+    <script>associateButtonToModal('add-crew-modal', 'add-crew-btn')</script>
+    
+    <footer style="position: absolute; top: calc(100vh - 36px); margin: 0;">
+        <div style="color: white; background: linear-gradient(#5F4B8B, #313B64); height: 20px; margin: 0; width: 100vw; text-align: center; box-shadow: 0 0 15px black;">
+            <p>© 2023 Rocket System, Inc.</p>
+        </div>
+    </footer>
+</body>
+</html>

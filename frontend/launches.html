@@ -35,126 +35,72 @@
 
     <div class="grid">
         <div class="card">
-            <h2>Foguete 1</h2>
+            <h2>#0001</h2>
+            <h3>Foguete 1</h3>
             <div class="btn-div">
-                <div class="btn btn-blue launch-btn">Launch</div>
+                <div class="btn btn-blue info-btn">More info</div>
                 <div class="btn btn-pink edit-btn">Edit</div>
                 <div class="btn btn-red delete-btn">Delete</div>
             </div>
         </div>
 
         <div class="card">
-            <h2>Foguete 2</h2>
+            <h2>#0002</h2>
+            <h3>Foguete 2</h3>
             <div class="btn-div">
-                <div class="btn btn-blue launch-btn">Launch</div>
+                <div class="btn btn-blue info-btn">More info</div>
                 <div class="btn btn-pink edit-btn">Edit</div>
                 <div class="btn btn-red delete-btn">Delete</div>
             </div>
         </div>
 
         <div class="card">
-            <h2>Foguete 3</h2>
+            <h2>#0003</h2>
+            <h3>Foguete 3</h3>
             <div class="btn-div">
-                <div class="btn btn-blue launch-btn">Launch</div>
+                <div class="btn btn-blue info-btn">More info</div>
                 <div class="btn btn-pink edit-btn">Edit</div>
                 <div class="btn btn-red delete-btn">Delete</div>
             </div>
         </div>
 
         <div class="card">
-            <h2>Foguete 4</h2>
+            <h2>#0004</h2>
+            <h3>Foguete 4</h3>
             <div class="btn-div">
-                <div class="btn btn-blue launch-btn">Launch</div>
+                <div class="btn btn-blue info-btn">More info</div>
                 <div class="btn btn-pink edit-btn">Edit</div>
                 <div class="btn btn-red delete-btn">Delete</div>
             </div>
         </div>
 
         <div class="card">
-            <h2>Foguete 5</h2>
+            <h2>#0005</h2>
+            <h3>Foguete 5</h3>
             <div class="btn-div">
-                <div class="btn btn-blue launch-btn">Launch</div>
+                <div class="btn btn-blue info-btn">More info</div>
                 <div class="btn btn-pink edit-btn">Edit</div>
                 <div class="btn btn-red delete-btn">Delete</div>
             </div>
         </div>
 
         <div class="card">
-            <h2>Foguete 5</h2>
+            <h2>Go to Rockets to create a launch</h2>
             <div class="btn-div">
-                <div class="btn btn-blue launch-btn">Launch</div>
-                <div class="btn btn-pink edit-btn">Edit</div>
-                <div class="btn btn-red delete-btn">Delete</div>
-            </div>
-        </div>
-
-        <div class="card">
-            <h2>Foguete 6</h2>
-            <div class="btn-div">
-                <div class="btn btn-blue launch-btn">Launch</div>
-                <div class="btn btn-pink edit-btn">Edit</div>
-                <div class="btn btn-red delete-btn">Delete</div>
-            </div>
-        </div>
-
-        <div class="card">
-            <h2>Foguete 7</h2>
-            <div class="btn-div">
-                <div class="btn btn-blue launch-btn">Launch</div>
-                <div class="btn btn-pink edit-btn">Edit</div>
-                <div class="btn btn-red delete-btn">Delete</div>
-            </div>
-        </div>
-
-        <div class="card">
-            <h2>Foguete 8</h2>
-            <div class="btn-div">
-                <div class="btn btn-blue launch-btn">Launch</div>
-                <div class="btn btn-pink edit-btn">Edit</div>
-                <div class="btn btn-red delete-btn">Delete</div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="btn-div">
-                <div class="btn btn-green add-rocket-btn">Add Rocket</div>
+                <a href="rockets.html" style="text-decoration: none;"><div class="btn btn-green add-launch-btn">Go to Rockets</div></a>
             </div>
         </div>
     </div>
-
-    <!-- Add Rocket Modal -->
-    <div id="add-rocket-modal" class="modal">
-
-        <!-- Modal content -->
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('add-rocket-modal')">&times;</span>
-            <div class="modal-fields">
-                <div class="input-div-ctn">
-                    <div class="input-div">
-                        <label>Rocket name:</label>
-                        <input type="text" placeholder="Rocket name">
-                    </div>
-                </div>
-                <div class="btn-div">
-                    <div class="btn btn-red">Cancel</div>
-                    <div class="btn btn-green">Confirm</div>
-                </div>
-            </div>
-        </div>
-    
-    </div>
-
-    <script>associateButtonToModal('add-rocket-modal', 'add-rocket-btn')</script>
 
     <!-- Delete Modal -->
-    <div id="delete-rocket-modal" class="modal">
+    <div id="delete-launch-modal" class="modal">
 
         <!-- Modal content -->
         <div class="modal-content">
-            <span class="close" onclick="closeModal('delete-rocket-modal')">&times;</span>
+            <span class="close" onclick="closeModal('delete-launch-modal')">&times;</span>
             <div class="modal-fields">
                 <div class="modal-texts">
-                    <h3>Are you sure you want to delete this rocket?</h3>
+                    <h3>Are you sure you want to delete this launch?</h3>
                     <p>This action cannot be reversed</p>
                 </div>
                 <div class="btn-div">
@@ -166,43 +112,19 @@
     
     </div>
 
-    <script>associateButtonToModal('delete-rocket-modal', 'delete-btn')</script>
+    <script>associateButtonToModal('delete-launch-modal', 'delete-btn')</script>
 
     <!-- Edit Modal -->
-    <div id="edit-rocket-modal" class="modal">
+    <div id="edit-launch-modal" class="modal">
 
         <!-- Modal content -->
         <div class="modal-content">
-            <span class="close" onclick="closeModal('edit-rocket-modal')">&times;</span>
+            <span class="close" onclick="closeModal('edit-launch-modal')">&times;</span>
             <div class="modal-fields">
                 <div class="input-div-ctn">
                     <div class="input-div">
-                        <label>Rocket name:</label>
-                        <input type="text" placeholder="Rocket name">
-                    </div>
-                </div>
-                <div class="btn-div">
-                    <div class="btn btn-red">Cancel</div>
-                    <div class="btn btn-green">Confirm</div>
-                </div>
-            </div>
-        </div>
-    
-    </div>
-
-    <script>associateButtonToModal('edit-rocket-modal', 'edit-btn')</script>
-
-    <!-- Launch Modal -->
-    <div id="launch-rocket-modal" class="modal">
-
-        <!-- Modal content -->
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('launch-rocket-modal')">&times;</span>
-            <div class="modal-fields">
-                <div class="input-div-ctn">
-                    <div class="input-div">
-                        <label>Launch code:</label>
-                        <input type="text" placeholder="Launch code">
+                        <label>Rocket:</label>
+                        <input type="text" placeholder="Rocket">
                     </div>
                 </div>
                 <div class="input-div-ctn">
@@ -233,12 +155,34 @@
     
     </div>
 
-    <script>associateButtonToModal('launch-rocket-modal', 'launch-btn')</script>
+    <script>associateButtonToModal('edit-launch-modal', 'edit-btn')</script>
+
+    <!-- More info Modal -->
+    <div id="launch-info-modal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('launch-info-modal')">&times;</span>
+            <div class="modal-fields">
+                <h2>Launch code: #0000</h2>
+                <h2>Rocket: Rocket 0</h2>
+                <h2>Date: 05/15/2023</h2>
+                <h2>Crew: Equipe Alpha</h2>
+                <h2>Success: YES</h2>
+                <div class="btn-div">
+                    <div class="btn btn-pink edit-btn" onclick="closeModal('launch-info-modal'); document.getElementById('edit-launch-modal').style.display = 'block';">Edit</div>
+                </div>
+            </div>
+        </div>
     
+    </div>
+
+    <script>associateButtonToModal('launch-info-modal', 'info-btn')</script>
     <footer style="position: absolute; top: calc(100vh - 36px); margin: 0;">
         <div style="color: white; background: linear-gradient(#5F4B8B, #313B64); height: 20px; margin: 0; width: 100vw; text-align: center; box-shadow: 0 0 15px black;">
             <p>© 2023 Rocket System, Inc.</p>
         </div>
     </footer>
 </body>
+
 </html>

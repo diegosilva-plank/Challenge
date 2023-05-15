@@ -5,12 +5,19 @@
     max-width: 1600px;
     width: fit-content;
     justify-content: space-between;
-    max-height: calc(100vh - 180px);
+    max-height: calc(100vh - 200px);
     gap: 2rem;
     overflow-y: scroll;
     box-shadow: 0 0 5px white;
     background: rgba(255, 255, 255, 0.158);
     border-radius: 15px;
+    animation-name: launch_animation;
+    animation-duration: .5s;
+}
+
+@keyframes launch_animation {
+    from {padding-top: 33rem;}
+    to {padding: 1rem;}
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */

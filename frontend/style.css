@@ -4,6 +4,7 @@
 @import url('classes/grid.css');
 @import url('classes/card.css');
 @import url('classes/modal.css');
+@import url('classes/crew.css');
 
 * {
     box-sizing: border-box;
@@ -41,4 +42,11 @@ body {
 h2 {
     font-size: 24px;
     margin: 0 auto;
+    text-align: center;
+}
+
+h3 {
+    margin: 0;
+    color: rgb(70, 70, 70);
+    text-align: center;
 }

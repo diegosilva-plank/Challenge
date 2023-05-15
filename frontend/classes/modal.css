@@ -33,6 +33,17 @@
     box-shadow: 0 0px 7px black;
     display: flex;
     flex-direction: column;
+    animation-name: from_bottom_animation;
+    animation-duration: .5s;
+}
+
+@keyframes from_bottom_animation {
+    from {
+        top: 100vh;
+    }
+    to {
+        top: calc(50vh - 250px);
+    }
 }
 
 @media (min-width: 750px) {
