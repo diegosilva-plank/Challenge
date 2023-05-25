@@ -1,4 +1,4 @@
 export interface IRocket {
-    id: string
-    name: string
+  id: string
+  name: string
 }

@@ -1,16 +1,15 @@
-import { v4 as uuid } from "uuid";
+import { v4 as uuid } from 'uuid'
 
 export class Rocket {
+  id: string
 
-    id: string
+  name: string
 
-    name: string
+  constructor(props: Omit<Rocket, 'id'>, id?: string) {
+    Object.assign(this, props)
 
-    constructor(props: Omit<Rocket, 'id'>, id?: string) {
-        Object.assign(this, props)
-
-        if(!this.id) {
-            this.id = uuid()
-        }
+    if (!this.id) {
+      this.id = uuid()
     }
+  }
 }

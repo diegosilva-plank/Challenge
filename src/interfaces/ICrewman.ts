@@ -1,12 +1,11 @@
-import { ICrew } from "./ICrew"
+import { ICrew } from './ICrew'
 
 export interface ICrewman {
+  id: string
 
-    id: string
+  name: string
 
-    name: string
+  patent: string
 
-    patent: string
-
-    crews: ICrew[]
+  crews: ICrew[]
 }

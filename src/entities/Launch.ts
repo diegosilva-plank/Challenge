@@ -1,26 +1,25 @@
-import { v4 as uuid } from "uuid"
-import { Rocket } from "./Rocket";
-import { Crew } from "./Crew";
+import { v4 as uuid } from 'uuid'
+import { Rocket } from './Rocket'
+import { Crew } from './Crew'
 
 export class Launch {
+  id: string
 
-    id: string
+  launch_code: string
 
-    launch_code: string
+  date: string
 
-    date: string
+  success: boolean
 
-    success: boolean
+  rocket: any
 
-    rocket: any
+  crew: any
 
-    crew: any
+  constructor(props: Omit<Launch, 'id'>, id?: string) {
+    Object.assign(this, props)
 
-    constructor(props: Omit<Launch, 'id'>, id?: string) {
-        Object.assign(this, props)
-
-        if(!this.id) {
-            this.id = uuid()
-        }
+    if (!this.id) {
+      this.id = uuid()
     }
+  }
 }

@@ -1,5 +1,5 @@
-import { Joi, Segments, celebrate } from "celebrate";
-import { Launch } from "../entities/Launch";
+import { Joi, Segments, celebrate } from 'celebrate'
+import { Launch } from '../entities/Launch'
 
 export const createLaunchValidator = celebrate({
   [Segments.BODY]: Joi.object<Launch>().keys({
@@ -7,9 +7,9 @@ export const createLaunchValidator = celebrate({
     date: Joi.string().required(),
     success: Joi.boolean().required(),
     rocket: Joi.string().required(),
-    crew: Joi.string()
+    crew: Joi.string(),
   }),
-});
+})
 
 export const updateLaunchValidator = celebrate({
   [Segments.BODY]: Joi.object<Launch>().keys({
@@ -17,6 +17,6 @@ export const updateLaunchValidator = celebrate({
     date: Joi.string(),
     success: Joi.boolean(),
     rocket: Joi.string(),
-    crew: Joi.string()
+    crew: Joi.string(),
   }),
-});
+})

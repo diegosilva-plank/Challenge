@@ -1,19 +1,18 @@
-import { v4 as uuid } from "uuid"
-import { Crewman } from "./Crewman";
+import { v4 as uuid } from 'uuid'
+import { Crewman } from './Crewman'
 
 export class Crew {
+  id: string
 
-    id: string
+  name: string
 
-    name: string
+  crewmen: any[]
 
-    crewmen: any[]
+  constructor(props: Omit<Crew, 'id' | 'crewmen'>, id?: string) {
+    Object.assign(this, props)
 
-    constructor(props: Omit<Crew, 'id' | 'crewmen'>, id?: string) {
-        Object.assign(this, props)
-        
-        if(!this.id) {
-            this.id = uuid()
-        }
+    if (!this.id) {
+      this.id = uuid()
     }
+  }
 }

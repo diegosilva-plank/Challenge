@@ -1,17 +1,16 @@
-import { ICrew } from "./ICrew"
-import { IRocket } from "./IRocket"
+import { ICrew } from './ICrew'
+import { IRocket } from './IRocket'
 
 export interface ILaunch {
+  id: string
 
-    id: string
+  launch_code: string
 
-    launch_code: string
+  date: string
 
-    date: string
+  success: boolean
 
-    success: boolean
+  rocket: IRocket
 
-    rocket: IRocket
-
-    crew: ICrew
+  crew: ICrew
 }
