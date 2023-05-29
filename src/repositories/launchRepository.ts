@@ -12,7 +12,7 @@ export class LaunchRepository implements CrudRepository<Launch> {
   }
 
   async get(filter?: Partial<Launch>, relations?: any): Promise<Launch[]> {
-    const filterDB = { where: filter }
+    const filterDB = { where: filter, relations }
     const result = await this.repo.find(filterDB)
     return result as Launch[]
   }

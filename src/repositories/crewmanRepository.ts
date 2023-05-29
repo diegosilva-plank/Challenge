@@ -11,8 +11,8 @@ export class CrewmanRepository implements CrudRepository<Crewman> {
     this.repo = connectionSource.getRepository(CrewmanDB)
   }
 
-  async get(filter?: Partial<Crewman>): Promise<Crewman[]> {
-    const filterDB = { where: filter }
+  async get(filter?: Partial<Crewman>, relations?: any): Promise<Crewman[]> {
+    const filterDB = { where: filter, relations }
     const result = await this.repo.find(filterDB)
     return result as Crewman[]
   }
